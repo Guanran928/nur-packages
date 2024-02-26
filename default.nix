@@ -11,5 +11,9 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  # example-package = pkgs.callPackage ./pkgs/example-package { };
+  fcitx5-tokyonight = pkgs.callPackage ./pkgs/fcitx5-tokyonight {};
+  metacubexd = pkgs.callPackage ./pkgs/metacubexd {};
+  mpvScripts.modernx = pkgs.callPackage ./pkgs/mpvScripts/modernx {};
+  picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
+  v2ray-rules-dat = pkgs.callPackage ./pkgs/v2ray-rules-dat {};
 }
