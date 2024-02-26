@@ -15,5 +15,6 @@
   metacubexd = pkgs.callPackage ./pkgs/metacubexd {};
   mpvScripts.modernx = pkgs.callPackage ./pkgs/mpvScripts/modernx {};
   picom-ft-labs = pkgs.callPackage ./pkgs/picom-ft-labs {};
+  telegram-swift-bin = pkgs.callPackage ./pkgs/telegram-swift-bin {};
   v2ray-rules-dat = pkgs.callPackage ./pkgs/v2ray-rules-dat {};
 }
