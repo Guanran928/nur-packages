@@ -22,11 +22,15 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   dontBuild = true;
 
   installPhase = ''
+    runHook preInstall
+
     install -Dm644 modernx.lua $out/share/mpv/scripts/modernx.lua
 
     # I dont know how to handle the font...
     install -Dm644 Material-Design-Iconic-Font.ttf $out/share/mpv/fonts/Material-Design-Iconic-Font.ttf
     install -Dm644 Material-Design-Iconic-Round.ttf $out/share/mpv/fonts/Material-Design-Iconic-Round.ttf
+
+    runHook postInstall
   '';
 
   passthru.scriptName = "modernx.lua";
